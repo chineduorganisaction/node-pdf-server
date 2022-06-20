@@ -13,8 +13,8 @@ read_Pdf_File()
                 res.end();
             }
         );
-        const PORT = 8000;
-        const LOCALHOST = "127.0.0.1";
+        const PORT = process.env.PORT || 8000;
+        const LOCALHOST = process.env.HOST || "127.0.0.1";
         portal.listen(PORT, LOCALHOST);
         console.log(
             `App, Listening on LOCALHOST: ${LOCALHOST}; PORT: ${PORT}...`
