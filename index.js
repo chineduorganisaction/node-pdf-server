@@ -13,9 +13,8 @@ read_Pdf_File()
                 res.end();
             }
         );
-        const PORT = process.env.PORT || 8000;
-        const LOCALHOST = "node-server-pdf.herokuapp.com" || "127.0.0.1";
-        portal.listen(PORT);
+        const LOCALHOST = "127.0.0.1";
+        portal.listen(process.env.PORT || 8000);
         console.log(
             `App, Listening on LOCALHOST: ${LOCALHOST}; PORT: ${PORT}...`
         );
